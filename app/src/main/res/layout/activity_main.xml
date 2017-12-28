@@ -54,8 +54,8 @@
                     android:text="@string/First"
                     android:textColor="@color/yellow"
                     android:textSize="@dimen/buttonText"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="100dp"
+                    android:layout_marginLeft="@dimen/MarginBord"
+                    android:layout_marginRight="@dimen/MarginBotton"
                     android:textAlignment="center"
 
 
@@ -73,8 +73,8 @@
                     android:onClick="Second"
                     android:text="@string/Second"
                     android:textSize="@dimen/buttonText"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="@dimen/MarginBord"
+                    android:layout_marginLeft="@dimen/MarginBotton"
                     android:textColor="@color/yellow"
 
                     />
@@ -86,7 +86,11 @@
                     android:layout_below="@id/threepoinsb"
                     android:onClick="third"
                     android:text="@string/Third"
-                    android:textSize="@dimen/buttonText" />
+                    android:textSize="@dimen/buttonText"
+                    android:layout_marginLeft="@dimen/MarginBord"
+                    android:layout_marginRight="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
+                    />
 
                 <Button
                     android:id="@+id/onepointsb"
@@ -97,7 +101,12 @@
                     android:layout_below="@id/threepoinsb"
                     android:onClick="fourth"
                     android:text="@string/Fourth"
-                    android:textSize="@dimen/buttonText" />
+                    android:textSize="@dimen/buttonText"
+                    android:layout_marginRight="@dimen/MarginBord"
+                    android:layout_marginLeft="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
+
+                    />
             </RelativeLayout>
 
             <View
@@ -150,6 +159,9 @@
                     android:text="@string/First"
                     android:textSize="@dimen/buttonText"
 
+                    android:layout_marginLeft="@dimen/MarginBord"
+                    android:layout_marginRight="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
 
                     />
 
@@ -162,7 +174,13 @@
                     android:layout_below="@id/scoreyellow"
                     android:onClick="Secondy"
                     android:text="@string/Second"
-                    android:textSize="@dimen/buttonText" />
+                    android:textSize="@dimen/buttonText"
+                    android:layout_marginRight="@dimen/MarginBord"
+                    android:layout_marginLeft="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
+
+
+                    />
 
                 <Button
                     android:id="@+id/twopointsy"
@@ -174,6 +192,9 @@
                     android:onClick="thirdy"
                     android:text="@string/Third"
                     android:textSize="@dimen/buttonText"
+                    android:layout_marginLeft="@dimen/MarginBord"
+                    android:layout_marginRight="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
 
                     />
 
@@ -187,6 +208,9 @@
                     android:onClick="fourthy"
                     android:text="@string/Fourth"
                     android:textSize="@dimen/buttonText"
+                    android:layout_marginRight="@dimen/MarginBord"
+                    android:layout_marginLeft="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
 
                     />
             </RelativeLayout>
@@ -251,6 +275,9 @@
                     android:text="@string/First"
                     android:textSize="@dimen/buttonText"
 
+                    android:layout_marginLeft="@dimen/MarginBord"
+                    android:layout_marginRight="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
 
                     />
 
@@ -263,7 +290,12 @@
                     android:layout_below="@+id/scoreviolet"
                     android:onClick="Secondv"
                     android:text="@string/Second"
-                    android:textSize="@dimen/buttonText" />
+                    android:textSize="@dimen/buttonText"
+                    android:layout_marginRight="@dimen/MarginBord"
+                    android:layout_marginLeft="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
+
+                    />
 
 
                 <Button
@@ -274,7 +306,12 @@
                     android:layout_below="@id/threepoinsv"
                     android:onClick="thirdv"
                     android:text="@string/Third"
-                    android:textSize="@dimen/buttonText" />
+                    android:textSize="@dimen/buttonText"
+                    android:layout_marginLeft="@dimen/MarginBord"
+                    android:layout_marginRight="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
+
+                    />
 
                 <Button
                     android:id="@+id/onepointsv"
@@ -284,8 +321,14 @@
                     android:layout_alignParentRight="true"
                     android:layout_below="@id/threepoinsv"
                     android:onClick="fourthv"
-                    android:text="@string/Third"
-                    android:textSize="@dimen/buttonText" />
+                    android:text="@string/Fourth"
+                    android:textSize="@dimen/buttonText"
+                    android:layout_marginRight="@dimen/MarginBord"
+                    android:layout_marginLeft="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
+
+
+                    />
             </RelativeLayout>
 
             <View
@@ -336,7 +379,13 @@
                     android:layout_below="@id/scorewhite"
                     android:onClick="Firstw"
                     android:text="@string/First"
-                    android:textSize="@dimen/buttonText" />
+                    android:textSize="@dimen/buttonText"
+                    android:layout_marginLeft="@dimen/MarginBord"
+                    android:layout_marginRight="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
+
+
+                    />
 
                 <Button
                     android:id="@+id/threepoinsw"
@@ -347,6 +396,9 @@
                     android:layout_below="@id/scorewhite"
                     android:onClick="Secondw"
                     android:text="@string/Second"
+                    android:layout_marginRight="@dimen/MarginBord"
+                    android:layout_marginLeft="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
 
 
                     android:textSize="@dimen/buttonText" />
@@ -361,7 +413,12 @@
                     android:onClick="thirdw"
                     android:text="@string/Third"
 
-                    android:textSize="@dimen/buttonText" />
+                    android:textSize="@dimen/buttonText"
+                    android:layout_marginLeft="@dimen/MarginBord"
+                    android:layout_marginRight="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
+
+                    />
 
                 <Button
                     android:id="@+id/onepointsw"
@@ -373,6 +430,9 @@
                     android:onClick="fourthw"
                     android:text="@string/Fourth"
                     android:textSize="@dimen/buttonText"
+                    android:layout_marginRight="@dimen/MarginBord"
+                    android:layout_marginLeft="@dimen/MarginBotton"
+                    android:textColor="@color/yellow"
 
                     />
             </RelativeLayout>

@@ -3,6 +3,8 @@
     <dimen name="buttonText">25sp</dimen>
     <dimen name="Score">55sp</dimen>
     <dimen name="Cyclist">20sp</dimen>
+    <dimen name="MarginBord">16dp</dimen>"
+    <dimen name="MarginBotton">100dp</dimen>
 
 
 
