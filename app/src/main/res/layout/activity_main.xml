@@ -12,7 +12,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -47,13 +47,18 @@
 
                 <Button
                     android:id="@+id/fivepointsb"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/scoreblue"
                     android:onClick="First"
                     android:text="@string/First"
-                    android:textColor="@color/black"
+                    android:textColor="@color/yellow"
                     android:textSize="@dimen/buttonText"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="100dp"
+                    android:textAlignment="center"
+
+
 
 
                     />
@@ -67,7 +72,12 @@
                     android:layout_below="@+id/scoreblue"
                     android:onClick="Second"
                     android:text="@string/Second"
-                    android:textSize="@dimen/buttonText" />
+                    android:textSize="@dimen/buttonText"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="100dp"
+                    android:textColor="@color/yellow"
+
+                    />
 
                 <Button
                     android:id="@+id/twopointsb"
