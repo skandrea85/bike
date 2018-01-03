@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,453 +9,520 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/teamblue"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
-                    android:text="@string/Cyclist_Blue"
-                    android:textColor="@color/Blue"
-                    android:textSize="@dimen/Cyclist"
+                    android:layout_height="match_parent">
 
-                    />
+                    <TextView
+                        android:id="@+id/teamblue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/audiowide"
+                        android:gravity="center"
+                        android:text="@string/Cyclist_Blue"
+                        android:layout_marginTop="@dimen/MarginTop"
+                        android:textColor="@color/black"
 
-                <TextView
-                    android:id="@+id/scoreblue"
+                        android:textSize="@dimen/Cyclist"
+
+
+                        android:layout_marginBottom="@dimen/LayoutMargin"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/scoreblue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/teamblue"
+                        android:gravity="center"
+                        android:text="@string/Score"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Score"
+                        android:layout_marginBottom="@dimen/LayoutMargin"
+                        android:fontFamily="sans-serif-light"
+
+                        />
+
+                    <Button
+                        android:id="@+id/fivepointsb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/scoreblue"
+                        android:layout_marginLeft="@dimen/MarginBord"
+                        android:layout_marginRight="@dimen/MarginBotton"
+                        android:fontFamily="@font/audiowide"
+                        android:onClick="First"
+                        android:text="@string/First"
+                        android:textAlignment="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+
+                        android:layout_marginBottom="@dimen/insideMargine"
+
+
+                        />
+
+                    <Button
+                        android:id="@+id/threepoinsb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/scoreblue"
+                        android:layout_marginLeft="@dimen/MarginBotton"
+                        android:layout_marginRight="@dimen/MarginBord"
+                        android:fontFamily="@font/audiowide"
+                        android:onClick="Second"
+                        android:text="@string/Second"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+
+                        android:layout_marginBottom="@dimen/insideMargine"
+
+                        />
+
+                    <Button
+                        android:id="@+id/twopointsb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/threepoinsb"
+                        android:layout_marginLeft="@dimen/MarginBord"
+                        android:layout_marginRight="@dimen/MarginBotton"
+                        android:onClick="third"
+                        android:text="@string/Third"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+                        android:layout_marginBottom="@dimen/LayoutMargin"
+                        android:fontFamily="@font/audiowide"
+                        />
+
+                    <Button
+                        android:id="@+id/onepointsb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/threepoinsb"
+                        android:layout_marginLeft="@dimen/MarginBotton"
+                        android:layout_marginRight="@dimen/MarginBord"
+                        android:onClick="fourth"
+                        android:text="@string/Fourth"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+                        android:fontFamily="@font/audiowide"
+
+                        />
+                </RelativeLayout>
+
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/teamblue"
-                    android:gravity="center"
-                    android:text="@string/Score"
-                    android:textColor="@color/Blue"
-                    android:textSize="55sp" />
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@android:color/background_dark">
 
-                <Button
-                    android:id="@+id/fivepointsb"
+
+                </View>
+
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/scoreblue"
-                    android:onClick="First"
-                    android:text="@string/First"
-                    android:textColor="@color/yellow"
-                    android:textSize="@dimen/buttonText"
-                    android:layout_marginLeft="@dimen/MarginBord"
-                    android:layout_marginRight="@dimen/MarginBotton"
-                    android:textAlignment="center"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/teamyellow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/audiowide"
+                        android:gravity="center"
+                        android:text="@string/Cyclist_Yellow"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Cyclist"
+                        android:layout_marginTop="@dimen/MarginTop"
+                        android:layout_marginBottom="@dimen/LayoutMargin"
 
 
 
 
-                    />
 
-                <Button
-                    android:id="@+id/threepoinsb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/scoreblue"
-                    android:onClick="Second"
-                    android:text="@string/Second"
-                    android:textSize="@dimen/buttonText"
-                    android:layout_marginRight="@dimen/MarginBord"
-                    android:layout_marginLeft="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
+                        />
 
-                    />
+                    <TextView
+                        android:id="@+id/scoreyellow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/teamyellow"
+                        android:gravity="center"
+                        android:text="@string/Score"
+                        android:textColor="@color/Blue"
+                        android:textSize="@dimen/Score"
+                        android:layout_marginBottom="7dp"
+                        android:fontFamily="sans-serif-light"
 
-                <Button
-                    android:id="@+id/twopointsb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/threepoinsb"
-                    android:onClick="third"
-                    android:text="@string/Third"
-                    android:textSize="@dimen/buttonText"
-                    android:layout_marginLeft="@dimen/MarginBord"
-                    android:layout_marginRight="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
-                    />
+                        />
 
-                <Button
-                    android:id="@+id/onepointsb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@id/threepoinsb"
-                    android:onClick="fourth"
-                    android:text="@string/Fourth"
-                    android:textSize="@dimen/buttonText"
-                    android:layout_marginRight="@dimen/MarginBord"
-                    android:layout_marginLeft="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
+                    <Button
+                        android:id="@+id/fivepointsy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/scoreyellow"
+                        android:layout_marginLeft="@dimen/MarginBord"
+                        android:layout_marginRight="@dimen/MarginBotton"
+                        android:onClick="Firsty"
 
-                    />
-            </RelativeLayout>
+                        android:text="@string/First"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+                        android:layout_marginBottom="@dimen/insideMargine"
+                        android:fontFamily="@font/audiowide"
+
+                        />
+
+                    <Button
+                        android:id="@+id/threepoinsy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/scoreyellow"
+                        android:layout_marginLeft="@dimen/MarginBotton"
+                        android:layout_marginRight="@dimen/MarginBord"
+                        android:onClick="Secondy"
+                        android:text="@string/Second"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+                        android:layout_marginBottom="@dimen/insideMargine"
+                        android:fontFamily="@font/audiowide"
+
+
+                        />
+
+                    <Button
+                        android:id="@+id/twopointsy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/fivepointsy"
+                        android:layout_marginLeft="@dimen/MarginBord"
+                        android:layout_marginRight="@dimen/MarginBotton"
+                        android:onClick="thirdy"
+                        android:text="@string/Third"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+                        android:fontFamily="@font/audiowide"
+                        android:layout_marginBottom="@dimen/LayoutMargin"
+
+                        />
+
+                    <Button
+                        android:id="@+id/onepointsY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/threepoinsy"
+                        android:layout_marginLeft="@dimen/MarginBotton"
+                        android:layout_marginRight="@dimen/MarginBord"
+                        android:onClick="fourthy"
+                        android:text="@string/Fourth"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+                        android:layout_marginBottom="@dimen/LayoutMargin"
+                        android:fontFamily="@font/audiowide"
+
+                        />
+                </RelativeLayout>
+            </LinearLayout>
 
             <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:background="@android:color/background_dark">
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="9dp"
+                android:background="@android:color/background_dark"
+
+                >
 
 
             </View>
 
-            <RelativeLayout
+
+            <LinearLayout
+
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/teamyellow"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
-                    android:text="@string/Cyclist_Yellow"
-                    android:textColor="@color/Blue"
-                    android:textSize="@dimen/Cyclist"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/teamviolet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/audiowide"
+                        android:gravity="center"
+                        android:text="@string/Cyclist_Violet"
+                        android:textColor="@color/Blue"
+                        android:textSize="@dimen/Cyclist"
+                        android:layout_marginTop="@dimen/MarginTop"
+                        android:layout_marginBottom="@dimen/LayoutMargin"
 
 
-                    />
 
-                <TextView
-                    android:id="@+id/scoreyellow"
+                        />
+
+                    <TextView
+                        android:id="@+id/scoreviolet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/teamviolet"
+                        android:gravity="center"
+                        android:text="@string/Score"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="@dimen/LayoutMargin"
+                        android:fontFamily="sans-serif-light"
+
+
+                        android:textSize="@dimen/Score" />
+
+                    <Button
+                        android:id="@+id/fivepointsv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/scoreviolet"
+                        android:layout_marginLeft="@dimen/MarginBord"
+                        android:layout_marginRight="@dimen/MarginBotton"
+                        android:onClick="Firstv"
+
+                        android:text="@string/First"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+                        android:layout_marginBottom="@dimen/insideMargine"
+                        android:fontFamily="@font/audiowide"
+
+                        />
+
+                    <Button
+                        android:id="@+id/threepoinsv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/scoreviolet"
+                        android:layout_marginLeft="@dimen/MarginBotton"
+                        android:layout_marginRight="@dimen/MarginBord"
+                        android:onClick="Secondv"
+                        android:text="@string/Second"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+                        android:layout_marginBottom="@dimen/insideMargine"
+                        android:fontFamily="@font/audiowide"
+
+                        />
+
+
+                    <Button
+                        android:id="@+id/twopointsv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@id/threepoinsv"
+                        android:layout_marginLeft="@dimen/MarginBord"
+                        android:layout_marginRight="@dimen/MarginBotton"
+                        android:onClick="thirdv"
+                        android:text="@string/Third"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+                        android:layout_marginBottom="@dimen/LayoutMargin"
+                        android:fontFamily="@font/audiowide"
+
+                        />
+
+                    <Button
+                        android:id="@+id/onepointsv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/threepoinsv"
+                        android:layout_marginLeft="@dimen/MarginBotton"
+                        android:layout_marginRight="@dimen/MarginBord"
+                        android:onClick="fourthv"
+                        android:text="@string/Fourth"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+                        android:layout_marginBottom="@dimen/LayoutMargin"
+                        android:fontFamily="@font/audiowide"
+
+
+                        />
+                </RelativeLayout>
+
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/teamyellow"
-                    android:gravity="center"
-                    android:text="@string/Score"
-                    android:textColor="@color/Blue"
-                    android:textSize="@dimen/Score"
-
-                    />
-
-                <Button
-                    android:id="@+id/fivepointsy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/scoreyellow"
-                    android:onClick="Firsty"
-                    android:text="@string/First"
-                    android:textSize="@dimen/buttonText"
-
-                    android:layout_marginLeft="@dimen/MarginBord"
-                    android:layout_marginRight="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
-
-                    />
-
-                <Button
-                    android:id="@+id/threepoinsy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@id/scoreyellow"
-                    android:onClick="Secondy"
-                    android:text="@string/Second"
-                    android:textSize="@dimen/buttonText"
-                    android:layout_marginRight="@dimen/MarginBord"
-                    android:layout_marginLeft="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@android:color/background_dark">
 
 
-                    />
+                </View>
 
-                <Button
-                    android:id="@+id/twopointsy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/fivepointsy"
-                    android:onClick="thirdy"
-                    android:text="@string/Third"
-                    android:textSize="@dimen/buttonText"
-                    android:layout_marginLeft="@dimen/MarginBord"
-                    android:layout_marginRight="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    />
+                    <TextView
+                        android:id="@+id/teamwhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/audiowide"
+                        android:gravity="center"
+                        android:text="@string/Cyclist_White"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Cyclist"
+                        android:layout_marginTop="@dimen/MarginTop"
+                        android:layout_marginBottom="@dimen/LayoutMargin"
 
-                <Button
-                    android:id="@+id/onepointsY"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@id/threepoinsy"
-                    android:onClick="fourthy"
-                    android:text="@string/Fourth"
-                    android:textSize="@dimen/buttonText"
-                    android:layout_marginRight="@dimen/MarginBord"
-                    android:layout_marginLeft="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
+                        />
 
-                    />
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/scorewhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/teamwhite"
+                        android:gravity="center"
+                        android:text="@string/Score"
+                        android:textColor="@color/Blue"
+                        android:textSize="@dimen/Score"
+                        android:layout_marginBottom="@dimen/LayoutMargin"
+                        android:fontFamily="sans-serif-light"
+
+
+                        />
+
+                    <Button
+                        android:id="@+id/fivepointsw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/scorewhite"
+                        android:layout_marginLeft="@dimen/MarginBord"
+                        android:layout_marginRight="@dimen/MarginBotton"
+                        android:onClick="Firstw"
+                        android:text="@string/First"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+                        android:layout_marginBottom="@dimen/insideMargine"
+                        android:fontFamily="@font/audiowide"
+
+
+                        />
+
+                    <Button
+                        android:id="@+id/threepoinsw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/scorewhite"
+                        android:layout_marginLeft="@dimen/MarginBotton"
+                        android:layout_marginRight="@dimen/MarginBord"
+                        android:onClick="Secondw"
+                        android:text="@string/Second"
+                        android:textColor="@color/yellow"
+                        android:layout_marginBottom="@dimen/insideMargine"
+                        android:fontFamily="@font/audiowide"
+
+
+                        android:textSize="@dimen/buttonText" />
+
+                    <Button
+                        android:id="@+id/twopointsw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/fivepointsw"
+                        android:layout_marginLeft="@dimen/MarginBord"
+                        android:layout_marginRight="@dimen/MarginBotton"
+                        android:layout_marginBottom="@dimen/LayoutMargin"
+
+                        android:onClick="thirdw"
+                        android:text="@string/Third"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+                        android:fontFamily="@font/audiowide"
+
+                        />
+
+                    <Button
+                        android:id="@+id/onepointsw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/threepoinsw"
+                        android:layout_marginLeft="@dimen/MarginBotton"
+                        android:layout_marginRight="@dimen/MarginBord"
+                        android:onClick="fourthw"
+                        android:text="@string/Fourth"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/buttonText"
+                        android:layout_marginBottom="@dimen/LayoutMargin"
+                        android:fontFamily="@font/audiowide"
+
+                        />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
         </LinearLayout>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="9dp"
-            android:background="@android:color/background_dark"
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
 
+            android:onClick="newRound"
+            android:text="@string/race"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/buttonText"
+            android:fontFamily="@font/audiowide"
             >
 
 
-        </View>
-
-
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/teamviolet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
-                    android:text="@string/Cyclist_Violet"
-                    android:textColor="@color/Blue"
-                    android:textSize="@dimen/Cyclist"
-
-
-                    />
-
-                <TextView
-                    android:id="@+id/scoreviolet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/teamviolet"
-                    android:gravity="center"
-                    android:text="@string/Score"
-                    android:textColor="@color/Blue"
-
-
-                    android:textSize="@dimen/Score" />
-
-                <Button
-                    android:id="@+id/fivepointsv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/scoreviolet"
-                    android:onClick="Firstv"
-                    android:text="@string/First"
-                    android:textSize="@dimen/buttonText"
-
-                    android:layout_marginLeft="@dimen/MarginBord"
-                    android:layout_marginRight="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
-
-                    />
-
-                <Button
-                    android:id="@+id/threepoinsv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/scoreviolet"
-                    android:onClick="Secondv"
-                    android:text="@string/Second"
-                    android:textSize="@dimen/buttonText"
-                    android:layout_marginRight="@dimen/MarginBord"
-                    android:layout_marginLeft="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
-
-                    />
-
-
-                <Button
-                    android:id="@+id/twopointsv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_below="@id/threepoinsv"
-                    android:onClick="thirdv"
-                    android:text="@string/Third"
-                    android:textSize="@dimen/buttonText"
-                    android:layout_marginLeft="@dimen/MarginBord"
-                    android:layout_marginRight="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
-
-                    />
-
-                <Button
-                    android:id="@+id/onepointsv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@id/threepoinsv"
-                    android:onClick="fourthv"
-                    android:text="@string/Fourth"
-                    android:textSize="@dimen/buttonText"
-                    android:layout_marginRight="@dimen/MarginBord"
-                    android:layout_marginLeft="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
-
-
-                    />
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:background="@android:color/background_dark">
-
-
-            </View>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/teamwhite"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
-                    android:text="@string/Cyclist_White"
-                    android:textColor="@color/Blue"
-                    android:textSize="@dimen/Cyclist"
-
-                    />
-
-                <TextView
-                    android:id="@+id/scorewhite"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/teamwhite"
-                    android:gravity="center"
-                    android:text="@string/Score"
-                    android:textColor="@color/Blue"
-                    android:textSize="@dimen/Score"
-
-
-                    />
-
-                <Button
-                    android:id="@+id/fivepointsw"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/scorewhite"
-                    android:onClick="Firstw"
-                    android:text="@string/First"
-                    android:textSize="@dimen/buttonText"
-                    android:layout_marginLeft="@dimen/MarginBord"
-                    android:layout_marginRight="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
-
-
-                    />
-
-                <Button
-                    android:id="@+id/threepoinsw"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@id/scorewhite"
-                    android:onClick="Secondw"
-                    android:text="@string/Second"
-                    android:layout_marginRight="@dimen/MarginBord"
-                    android:layout_marginLeft="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
-
-
-                    android:textSize="@dimen/buttonText" />
-
-                <Button
-                    android:id="@+id/twopointsw"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/fivepointsw"
-                    android:onClick="thirdw"
-                    android:text="@string/Third"
-
-                    android:textSize="@dimen/buttonText"
-                    android:layout_marginLeft="@dimen/MarginBord"
-                    android:layout_marginRight="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
-
-                    />
-
-                <Button
-                    android:id="@+id/onepointsw"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@id/threepoinsw"
-                    android:onClick="fourthw"
-                    android:text="@string/Fourth"
-                    android:textSize="@dimen/buttonText"
-                    android:layout_marginRight="@dimen/MarginBord"
-                    android:layout_marginLeft="@dimen/MarginBotton"
-                    android:textColor="@color/yellow"
-
-                    />
-            </RelativeLayout>
-
-
-        </LinearLayout>
+        </Button>
 
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:onClick="newRound"
-        android:text="@string/race"
-        android:textColor="@color/yellow"
-        android:textSize="@dimen/buttonText">
 
-
-    </Button>
-
-
-</RelativeLayout>
+</ScrollView>
 
 

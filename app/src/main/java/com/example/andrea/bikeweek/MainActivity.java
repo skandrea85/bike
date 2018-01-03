@@ -10,6 +10,13 @@ public class MainActivity extends AppCompatActivity {
     int scorecyclistyellow = 0;
     int scorecyclistviolet = 0;
     int scorecyclistwhite = 0;
+
+
+
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +25,17 @@ public class MainActivity extends AppCompatActivity {
         displayforcyclistyellow(0);
         displayforcyclistviolet(0);
         displayforcyclistwhite(0);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -40,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.scorewhite);
         scoreView.setText(String.valueOf(score));
     }
+
+
+
 
 
     public void First(View V) {

@@ -7,6 +7,8 @@
     <color name="yellow">#ffff00</color>
     <color name="black">#000000</color>
     <color name="Blue">#000060</color>
+    <color name="blactrasparent">#A6000000</color>
+    <color name="Azure">#007fff</color>
 
 </resources>
 

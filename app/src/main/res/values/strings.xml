@@ -5,10 +5,10 @@
     <string name="Cyclist_Yellow">Cyclist Yellow</string>
     <string name="Cyclist_Violet">Cyclist Violet</string>
     <string name="Cyclist_White">Cyclist White</string>
-    <string name="First">1°</string>
-    <string name="Second">2°</string>
-    <string name="Third">3°</string>
-    <string name="Fourth">4°</string>
+    <string name="First">+5</string>
+    <string name="Second">+3</string>
+    <string name="Third">+2</string>
+    <string name="Fourth">+1</string>
     <string name="race">RACE</string>
     
 </resources>
