@@ -6,10 +6,18 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+
     int scorecyclistblue = 0;
     int scorecyclistyellow = 0;
     int scorecyclistviolet = 0;
     int scorecyclistwhite = 0;
+
+    TextView scoreViewb;
+
+
+
+
 
 
 
@@ -21,10 +29,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayforcyclistblue(0);
-        displayforcyclistyellow(0);
-        displayforcyclistviolet(0);
-        displayforcyclistwhite(0);
+
+         scoreViewb = (TextView) findViewById(R.id.scoreblue);
+
+
+
+
+
+
+
+
+
 
 
 
@@ -41,22 +56,28 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void displayforcyclistblue(int score){
-        TextView scoreView = (TextView) findViewById(R.id.scoreblue);
-        scoreView.setText(String.valueOf(score));
+
+
+
+
+        scoreViewb.setText(String.valueOf(score));
     }
 
     public void displayforcyclistyellow(int score){
-        TextView scoreView = (TextView) findViewById(R.id.scoreyellow);
-        scoreView.setText(String.valueOf(score));
+
+         TextView scoreViewy = (TextView) findViewById(R.id.scoreyellow);
+        scoreViewy.setText(String.valueOf(score));
     }
     public void displayforcyclistviolet(int score){
-        TextView scoreView = (TextView) findViewById(R.id.scoreviolet);
-        scoreView.setText(String.valueOf(score));
+        TextView scoreViewv = (TextView) findViewById(R.id.scoreviolet);
+
+        scoreViewv.setText(String.valueOf(score));
     }
 
     public void displayforcyclistwhite(int score){
-        TextView scoreView = (TextView) findViewById(R.id.scorewhite);
-        scoreView.setText(String.valueOf(score));
+        TextView scoreVieww = (TextView) findViewById(R.id.scorewhite);
+
+        scoreVieww.setText(String.valueOf(score));
     }
 
 
