@@ -13,16 +13,27 @@ public class MainActivity extends AppCompatActivity {
     int scorecyclistviolet = 0;
     int scorecyclistwhite = 0;
 
-    TextView scoreViewb;
+    TextView scoreViewB;
+    TextView scoreViewY;
+    TextView scoreViewV;
+    TextView scoreViewW;
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("cyclistyellow", scorecyclistyellow);
+
+        outState.putInt("cyclistblue", scorecyclistblue);
+        outState.putInt("cyclistviolet", scorecyclistviolet);
+        outState.putInt("cyclistwhite", scorecyclistwhite);
+        displayforcyclistwhite(scorecyclistwhite);
+        displayforcyclistviolet(scorecyclistviolet);
+        displayforcyclistyellow(scorecyclistyellow);
+        displayforcyclistblue(scorecyclistblue);
 
 
-
-
-
-
-
-
-
+    }
 
 
     @Override
@@ -30,58 +41,57 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-         scoreViewb = (TextView) findViewById(R.id.scoreblue);
+        scoreViewV = findViewById(R.id.scoreviolet);
+        scoreViewY = findViewById(R.id.scoreyellow);
+        scoreViewB = findViewById(R.id.scoreblue);
+        scoreViewW = findViewById(R.id.scorewhite);
+
+        if (savedInstanceState != null) {
 
 
+            scorecyclistyellow = savedInstanceState.getInt("cyclistyellow");
 
+            displayforcyclistyellow(scorecyclistyellow);
 
+            scorecyclistblue = savedInstanceState.getInt("cyclistblue");
+            displayforcyclistblue(scorecyclistblue);
 
+            scorecyclistviolet = savedInstanceState.getInt("cyclistviolet");
 
+            displayforcyclistviolet(scorecyclistviolet);
 
+            scorecyclistwhite = savedInstanceState.getInt("cyclistwhite");
 
+            displayforcyclistwhite(scorecyclistwhite);
 
-
-
-
-
-
-
-
-
-
-
-
-
+        }
 
 
     }
-    public void displayforcyclistblue(int score){
+
+    public void displayforcyclistblue(int score) {
 
 
-
-
-        scoreViewb.setText(String.valueOf(score));
+        scoreViewB.setText(String.valueOf(score));
     }
 
-    public void displayforcyclistyellow(int score){
+    public void displayforcyclistyellow(int score) {
 
-         TextView scoreViewy = (TextView) findViewById(R.id.scoreyellow);
-        scoreViewy.setText(String.valueOf(score));
-    }
-    public void displayforcyclistviolet(int score){
-        TextView scoreViewv = (TextView) findViewById(R.id.scoreviolet);
 
-        scoreViewv.setText(String.valueOf(score));
+        scoreViewY.setText(String.valueOf(score));
     }
 
-    public void displayforcyclistwhite(int score){
-        TextView scoreVieww = (TextView) findViewById(R.id.scorewhite);
+    public void displayforcyclistviolet(int score) {
 
-        scoreVieww.setText(String.valueOf(score));
+
+        scoreViewV.setText(String.valueOf(score));
     }
 
+    public void displayforcyclistwhite(int score) {
 
 
+        scoreViewW.setText(String.valueOf(score));
+    }
 
 
     public void First(View V) {
@@ -91,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
     public void Second(View V) {
         scorecyclistblue = scorecyclistblue + 3;
         displayforcyclistblue(scorecyclistblue);
@@ -100,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         scorecyclistblue = scorecyclistblue + 2;
         displayforcyclistblue(scorecyclistblue);
     }
+
     public void fourth(View View) {
         scorecyclistblue = scorecyclistblue + 1;
         displayforcyclistblue(scorecyclistblue);
@@ -113,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
     public void Secondy(View View) {
         scorecyclistyellow = scorecyclistyellow + 3;
         displayforcyclistyellow(scorecyclistyellow);
@@ -122,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
         scorecyclistyellow = scorecyclistyellow + 2;
         displayforcyclistyellow(scorecyclistyellow);
     }
+
     public void fourthy(View View) {
         scorecyclistyellow = scorecyclistyellow + 1;
         displayforcyclistyellow(scorecyclistyellow);
@@ -135,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
     public void Secondv(View View) {
         scorecyclistviolet = scorecyclistviolet + 3;
         displayforcyclistviolet(scorecyclistviolet);
@@ -144,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
         scorecyclistviolet = scorecyclistviolet + 2;
         displayforcyclistviolet(scorecyclistviolet);
     }
+
     public void fourthv(View View) {
         scorecyclistviolet = scorecyclistviolet + 1;
         displayforcyclistviolet(scorecyclistviolet);
@@ -156,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
     public void Secondw(View View) {
         scorecyclistwhite = scorecyclistwhite + 3;
         displayforcyclistwhite(scorecyclistwhite);
@@ -165,6 +182,7 @@ public class MainActivity extends AppCompatActivity {
         scorecyclistwhite = scorecyclistwhite + 2;
         displayforcyclistwhite(scorecyclistwhite);
     }
+
     public void fourthw(View View) {
         scorecyclistwhite = scorecyclistwhite + 1;
         displayforcyclistwhite(scorecyclistwhite);
